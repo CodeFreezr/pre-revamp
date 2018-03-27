@@ -1,0 +1,8 @@
+todo for 7.3:
+
+Merge 0.7.2. / 0.7.3 Tabelle
+Ein Json
+
+Abgleich Folder und Einträge
+
+Export 

@@ -1,0 +1,240 @@
+digraph G {
+    size="8,12";
+	node [shape = none];
+    rankdir=LR;
+
+
+subgraph clusterRUTK {
+    label = "RuT-K (19)";
+ 	labeljust="l";
+	style=filled;
+    fillcolor=green;
+    pencolor = transparent;   
+        
+		subgraph clusterRutKClient {
+		   label = "";
+		   style=filled;
+           fillcolor=white;
+           //pencolor = transparent;	 		   
+		    "RuT-K Client";
+		}
+
+		subgraph clusterRutKServer {
+		   label = "";
+		   style=filled;
+           fillcolor=white;
+           //pencolor = transparent;	 		   
+		    "RuT-K Server";
+
+		}
+
+
+		subgraph clusterRutKDatabase {
+		     label = "";
+		   style=filled;
+           fillcolor=white;
+           //pencolor = transparent;	 		   
+		    "RuT-K Database";
+
+		}    
+}
+
+subgraph clusterGFDZ {
+    label = "GFD-Z (17)";
+ 	labeljust="l";
+	style=filled;
+    fillcolor=green;
+    pencolor = transparent;   
+        
+		subgraph clusterGFDZClient {
+		   label = "";
+		   style=filled;
+           fillcolor=white;
+           //pencolor = transparent;	 		   
+		    "GFD-Z Client";
+		}
+
+		subgraph clusterGFDZServer {
+		   label = "";
+		   style=filled;
+           fillcolor=white;
+           //pencolor = transparent;	 		   
+		   "GFD-Z Server";
+		}
+
+		subgraph clusterGFDZDatabase {
+		   label = "";
+		   style=filled;
+           fillcolor=white;
+           //pencolor = transparent;	 		   
+		   "GFD-Z Database";
+		}    
+}
+
+subgraph clusterTPN {
+    label = "TPN (20)";
+ 	labeljust="l";
+	style=filled;
+    fillcolor=green;
+    pencolor = transparent;   
+        
+		subgraph clusterTPNClientServer {
+		   label = "";
+		   style=filled;
+           fillcolor=white;
+           //pencolor = transparent;	 		   
+		    "TPN ClientServer";
+		}
+
+
+		subgraph clusterTPNDatabase {
+		   label = "";
+		   style=filled;
+           fillcolor=white;
+           //pencolor = transparent;	 		   
+		   "TPN Database";
+		}    
+}
+
+
+
+	subgraph clusterKonBel {
+	    label = "KonBel";
+	    labeljust="r";
+	    style=filled;
+        fillcolor=green;
+        pencolor = transparent;
+	    
+		
+		subgraph clusterCommons {
+		   label = "Commons (Com)";
+		   style=filled;
+           fillcolor=white;
+           pencolor = transparent;
+		   
+		   CmnLib;
+		   CmnDB;
+		   CmnTempInfraDB;
+		   
+		}
+		
+		subgraph clusterKonstruktion {
+		   label = "Konstruktion (2)";
+		   style=filled;
+           fillcolor=white;
+           //pencolor = transparent;	 		   
+		   
+		   ConflictChecker;
+		   ConflictChecker -> CmnDB;
+		   ConflictChecker -> Redis;
+		   ConflictChecker -> "RuT-K Server";
+
+
+		   VNI -> CmnDB;
+		   VNI -> Redis;
+		   VNI -> "RuT-K Server";
+		   
+		   VNIStorage -> CmnDB;
+		   VNIStorage -> Redis;
+		   VNIStorage -> "RuT-K Server";
+		}		
+
+		subgraph clusterBelegung {
+		   label = "Belegung (4)";
+		   style=filled;
+           fillcolor=white;
+           pencolor = transparent;	
+           
+		   BelegungMain -> VNI;
+		   BelegungMain -> VNIStorage;
+		   BelegungMain -> ConflictChecker;
+		   BelegungMain -> CmnDB;
+		   BelegungMain -> CmnLib;
+		   
+		   EinzelBeleg -> ConflictChecker;
+		   EinzelBeleg -> VNI;
+		   EinzelBeleg -> VNIStorage;
+		   EinzelBeleg -> CmnDB;
+		   EinzelBeleg -> CmnLib;
+		}
+
+
+
+	}
+
+
+subgraph clusterUE15 {
+    label = "TPS (15)";
+    labeljust="l";
+    style=filled;
+    fillcolor=green;
+    pencolor = transparent;
+
+    subgraph clusterDB {
+	    label = "Database";
+	    labeljust="m";
+	    style=filled;
+        fillcolor=white;
+        pencolor = transparent;
+	    
+	    DigiKapAtttributWerte;
+	    DigiKapSTA;
+	    DigiKapSKAT;
+	    DigiKapSzenario;
+    }
+
+	subgraph clusterESB {
+	    label = "ESB";
+	    labeljust="l";
+	    style=filled;
+        fillcolor=white;
+        pencolor = transparent;
+		SzenarioVerw -> BelegungMain;
+		SzenarioVerw -> DigiKapSzenario;
+		TrassenVerw -> "RuT-K Server";
+		SystemTraBereit;
+		SystemTraVerw;
+		TraProPundE;
+	}
+	
+	subgraph clusterBPMN {
+	    label = "BPMN";
+	    labeljust="l";
+	    style=filled;
+        fillcolor=white;
+        pencolor = transparent;
+	    
+	    "Phase G" -> "IS CommonUtils";
+	    "Phase G" -> "KonBel Datentransfer";
+	    "Phase G" -> TrassenVerw;
+	    "Phase E" -> "IS CommonUtils";
+	    "Phase E" -> "KonBel Datentransfer";
+	    "Phase E" -> SzenarioVerw;
+	    "KonBel Datentransfer" -> "IS CommonUtils";
+		"DigiKap Verwaltung" -> "IS CommonUtils";
+		"DigiKap Verwaltung" -> "KonBel Datentransfer";
+		"IS CommonUtils" -> DigiKapAtttributWerte;
+		"IS CommonUtils" -> SzenarioVerw;
+		"IS CommonUtils" -> TraProPundE;
+		"IS CommonUtils" -> SystemTraVerw;
+		"IS CommonUtils" -> SystemTraBereit;
+		
+	}
+
+
+	
+}
+
+subgraph clusterCnR {
+    label = "Click & Ride (16a)";
+    labeljust="r";
+    z1 -> c;
+    y2 -> c;
+}
+
+
+
+
+
+	c -> z1;
+}

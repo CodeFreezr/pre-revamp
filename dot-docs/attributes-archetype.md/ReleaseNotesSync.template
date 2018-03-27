@@ -1,0 +1,15 @@
+# RELEASE NOTE
+
+# Release Belegung
+artefact:
+   name: ${pkgName}
+   component: ${cmpName}
+   version: ${version}
+   type: ${type}
+   technology: ${technology}
+   trunk: ${trunkPath} 
+   jira: ${jiraProject}
+
+
+# Changes
+${stories}

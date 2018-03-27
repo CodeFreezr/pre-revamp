@@ -1,0 +1,14 @@
+
+svn checkout --username detlefburkhardt https://swd.noncd.rz.db.de/svn/next/trunk
+
+
+
+https://wiki.jenkins.io/display/JENKINS/HTML+Publisher+Plugin
+
+
+12:04
+
+Benedikt Nagy
+
+Beispiel-URL für HTML-Reports:
+http://ma26642.iservices.db.de:9080/job/sandbox/job/Benedikt/job/TestHTMLPublishing/HTML_Report/

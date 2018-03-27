@@ -1,0 +1,1 @@
+call groovy checkyaml ReleaseNotes %1%
