@@ -1,1 +1,0 @@
-call groovy checkyaml Configurations %1%
