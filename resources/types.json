@@ -1,0 +1,226 @@
+[
+    {
+      "ID": 1,
+      "Name": "addDouble",
+      "Based-On": "Double",
+      "EnumValues-Or-Examples": "",
+      "Description": "A double with an optional prefix '+'. "
+    },
+    {
+      "ID": 2,
+      "Name": "addPoint",
+      "Based-On": "Double",
+      "EnumValues-Or-Examples": "",
+      "Description": "A point with an optional prefix '+'."
+    },
+    {
+      "ID": 3,
+      "Name": "arrowType",
+      "Based-On": "Enum",
+      "EnumValues-Or-Examples": "(box, crow, diamond, dot, inv, none, normal, tee, vee)(odot, invdot, invodot, obox, odiamond) (ediamond, open, halfopen, empty, invempty)",
+      "Description": "The basic arrows shown above contain most of the primitive shapes plus ones that can be derived from the o/inv grammar plus some supported as special cases for backward-compatibility. "
+    },
+    {
+      "ID": 4,
+      "Name": "bool",
+      "Based-On": "Boolean",
+      "EnumValues-Or-Examples": "true, false",
+      "Description": ""
+    },
+    {
+      "ID": 5,
+      "Name": "clusterMode",
+      "Based-On": "Enum",
+      "EnumValues-Or-Examples": "local, global, none",
+      "Description": ""
+    },
+    {
+      "ID": 6,
+      "Name": "color",
+      "Based-On": "String",
+      "EnumValues-Or-Examples": "#606060, #6060605F, blue, green",
+      "Description": "Colors can be specified using one of four formats: RGB, RGBA, HSV, string."
+    },
+    {
+      "ID": 7,
+      "Name": "colorList",
+      "Based-On": "List of Strings",
+      "EnumValues-Or-Examples": "",
+      "Description": "A colon-separated list of weighted color values. WC(:WC)* where each WC has the form C(;F)? with C a color value and the optional F a floating-point number, 0 ≤ F ≤ 1. The sum of the floating-point numbers in a colorList must sum to at most 1."
+    },
+    {
+      "ID": 8,
+      "Name": "dirType",
+      "Based-On": "Enum",
+      "EnumValues-Or-Examples": "forward, back, both, none",
+      "Description": "For an edge T -> H."
+    },
+    {
+      "ID": 9,
+      "Name": "double",
+      "Based-On": "Double",
+      "EnumValues-Or-Examples": "",
+      "Description": ""
+    },
+    {
+      "ID": 10,
+      "Name": "doubleList",
+      "Based-On": "List of Doubles",
+      "EnumValues-Or-Examples": "",
+      "Description": "A colon-separated list of doubles: \"%f(:%f)*\" where each %f is a double."
+    },
+    {
+      "ID": 11,
+      "Name": "escString",
+      "Based-On": "String",
+      "EnumValues-Or-Examples": "",
+      "Description": "A string allowing escape sequences which are replaced according to the context. "
+    },
+    {
+      "ID": 12,
+      "Name": "layerList",
+      "Based-On": "List of Strings",
+      "EnumValues-Or-Examples": "",
+      "Description": "List of strings separated by characters from the layersep attribute (by default, colons, tabs or spaces), defining layer names and implicitly numbered 1,2,... "
+    },
+    {
+      "ID": 13,
+      "Name": "layerRange",
+      "Based-On": "List of Strings",
+      "EnumValues-Or-Examples": "",
+      "Description": "Specifies a list of layers defined by the layers attribute."
+    },
+    {
+      "ID": 14,
+      "Name": "lblString",
+      "Based-On": "String",
+      "EnumValues-Or-Examples": "",
+      "Description": "An escString or an HTML label."
+    },
+    {
+      "ID": 15,
+      "Name": "outputMode",
+      "Based-On": "Enum",
+      "EnumValues-Or-Examples": "breadthfirst, nodesfirst, edgesfirst",
+      "Description": "These specify the order in which nodes and edges are drawn in concrete output."
+    },
+    {
+      "ID": 16,
+      "Name": "packMode",
+      "Based-On": "Enum",
+      "EnumValues-Or-Examples": "node, clust, graph, array(_flags)?(%d)?",
+      "Description": ""
+    },
+    {
+      "ID": 17,
+      "Name": "pagedir",
+      "Based-On": "Enum",
+      "EnumValues-Or-Examples": "BL, BR, TL, TR, RB, RT, LB, LT",
+      "Description": ""
+    },
+    {
+      "ID": 18,
+      "Name": "point",
+      "Based-On": "Coordinate",
+      "EnumValues-Or-Examples": "%f, %f('!')? ",
+      "Description": "Representing the point (x,y). The optional '!' indicates the node position should not change (input-only). If dim is 3, point may also have the format \"%f,%f,%f('!')?\" to represent the point (x,y,z). "
+    },
+    {
+      "ID": 19,
+      "Name": "pointList",
+      "Based-On": "List of Coordinates",
+      "EnumValues-Or-Examples": "",
+      "Description": "A list of points, separated by spaces."
+    },
+    {
+      "ID": 20,
+      "Name": "portPos",
+      "Based-On": "Enum",
+      "EnumValues-Or-Examples": "",
+      "Description": "Modifier indicating where on a node an edge should be aimed. It has the form portname(:compass_point)? or compass_point."
+    },
+    {
+      "ID": 21,
+      "Name": "quadType",
+      "Based-On": "Enum",
+      "EnumValues-Or-Examples": "normal, fast, none",
+      "Description": ""
+    },
+    {
+      "ID": 22,
+      "Name": "rankdir",
+      "Based-On": "Enum",
+      "EnumValues-Or-Examples": "TB, LR, BT, RL",
+      "Description": ""
+    },
+    {
+      "ID": 23,
+      "Name": "rankType",
+      "Based-On": "Enum",
+      "EnumValues-Or-Examples": "same, min, source, max, sink",
+      "Description": ""
+    },
+    {
+      "ID": 24,
+      "Name": "rect",
+      "Based-On": "Two Coordinates",
+      "EnumValues-Or-Examples": "%f,%f,%f,%f (llx,lly,urx,ury)",
+      "Description": "The rectangle llx,lly,urx,ury. It gives the coordinates, in points, of the lower-left corner (llx,lly) and the upper-right corner (urx,ury). "
+    },
+    {
+      "ID": 25,
+      "Name": "shape",
+      "Based-On": "String",
+      "EnumValues-Or-Examples": "",
+      "Description": "A string specifying the shape of a node. There are three main types of shapes : polygon-based, record-based and user-defined. The record-based shape has largely been superseded and greatly generalized by HTML-like labels. That is, instead of using shape=record, one might consider using shape=none and an HTML-like label. "
+    },
+    {
+      "ID": 26,
+      "Name": "smoothType",
+      "Based-On": "Enum",
+      "EnumValues-Or-Examples": "none, avg_dist, graph_dist, power_dist, rng, spring and triangle",
+      "Description": ""
+    },
+    {
+      "ID": 27,
+      "Name": "splineType",
+      "Based-On": "Enum",
+      "EnumValues-Or-Examples": "",
+      "Description": "If a spline has points p1 p2 p3 pn, (n = 1 (mod 3)), the points correspond to the control points of a cubic B-spline from p1 to pn. If startp is given, it touches one node of the edge, and the arrowhead goes from p1 to startp. If startp is not given, p1 touches a node. Similarly for pn and endp. "
+    },
+    {
+      "ID": 28,
+      "Name": "startType",
+      "Based-On": "Enum",
+      "EnumValues-Or-Examples": " regular, self or random",
+      "Description": "If style is present, it must be one of the strings."
+    },
+    {
+      "ID": 29,
+      "Name": "styleItem-Node",
+      "Based-On": "List of Strings",
+      "EnumValues-Or-Examples": "radial, dashed, dotted, solid, invis, bold, filled, striped, wedged, diagonals, rounded",
+      "Description": ""
+    },
+    {
+      "ID": 30,
+      "Name": "styleItem-Edge",
+      "Based-On": "List of Strings",
+      "EnumValues-Or-Examples": "radial, dashed, dotted, solid, invis, bold, tapered",
+      "Description": ""
+    },
+    {
+      "ID": 31,
+      "Name": "styleItem-Cluster",
+      "Based-On": "List of Strings",
+      "EnumValues-Or-Examples": "radial, filled, striped, rounded",
+      "Description": ""
+    },
+    {
+      "ID": 32,
+      "Name": "viewPort",
+      "Based-On": "Coordinates",
+      "EnumValues-Or-Examples": "W,H,Z,x,y or W,H,Z,N",
+      "Description": "It specifies a viewport for the final image."
+    }
+   ]

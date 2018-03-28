@@ -5,18 +5,21 @@ LastEdit: 2018-03-28
 LastEditor: generator
 ---
 
-This Hello World show the first three primary entities:  
+This Hello World show the first three primary entities (Graph, Node & Edge):  
 
-     graph {a->b[label="Hello World"]}  
+    graph G {
+         Hello--World
+    }    
 
-2do: explain entities on shown example  
-
+"graph G" represents the graph entity. "Hello" and "World" are two nodes. "--" is a non-directed edge between both nodes.
+  
 Because of the the spatial meaning of a cluster becomes this the fourth primary entity, although its technical a special characteristic of a subgraph.  
 
-2do: Link to cluster  
+2do: Cluster Example
+2do: Link to graph,node,edge,cluster entity 
 
-Secondary Entities for e.g. are:
-
+Secondary Entities for e.g. are:  
+  
 * subgraph
 * rank
 * layer 
