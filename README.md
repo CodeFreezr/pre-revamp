@@ -1,6 +1,11 @@
 # pre-revamp
 Some structural content preperations for the graphviz.org revamp
 
+## Done:
+- First Breakdown of monolithic content 
+- generate intermediate JSON
+- breakdown in small markdowns
+
 ## Overall 2dos:
 - sync / move to gitlab
 - add responsive, reactive HugoSSG Theme & CI/CD
@@ -12,4 +17,4 @@ Some structural content preperations for the graphviz.org revamp
 
 ## Special:
 - 2do: Offer an interactive tour, like the golang-tour...  
-- 2do: Add a social radar page, like twitter, youtube, github, etc. pp.  
+- 2do: Add a social radar page, with twitter, youtube, github, etc. pp.  
