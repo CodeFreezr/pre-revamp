@@ -7,14 +7,14 @@ LastEditor: generator
 
 Here you should find all enumerations and type descriptions for all attributes, based on:  
 
-* Simple-Ones:
+## Simple-Ones:
 - Boolean
 - String
 - Double
 - Enum
 - ...
 
-* Complex-Ones:
+## Complex-Ones:
 - Coordinates
 - List of Strings
 - List of Doubles
